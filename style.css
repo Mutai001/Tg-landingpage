@@ -2,7 +2,8 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
 }
 
 .logo {
@@ -17,6 +18,9 @@ body {
     /* Primary color */
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar-container {
@@ -29,15 +33,20 @@ body {
 }
 
 .navbar-logo {
+    display: flex;
+    align-items: center;
     color: #fff;
-    font-size: 1.8rem;
-    font-weight: bold;
     text-decoration: none;
 }
 
+.logo-text {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
 .navbar-menu {
-    display: flex;
     list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
 }
@@ -50,171 +59,139 @@ body {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.navbar-menu i {
-    margin-right: 8px;
+    transition: color 0.3s ease;
 }
 
 .navbar-menu a:hover {
-    background-color: #4B5A20;
-    /* Secondary color */
-    color: #fff;
-    border-radius: 5px;
+    color: #000;
 }
 
 .navbar-toggle {
     display: none;
-    font-size: 1.5rem;
-    color: #fff;
     background: none;
     border: none;
-    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
 }
 
 
-/* Hero Section */
+/* Hero Section Styles */
 
 .hero-section {
     position: relative;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: #333;
+    color: #fff;
 }
 
 .hero-carousel {
-    position: absolute;
-    width: 100%;
+    display: flex;
+    width: 300%;
     height: 100%;
-    overflow: hidden;
-}
-
-.hero-carousel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
-    opacity: 0;
-    animation: fadeInOut 15s infinite;
+    animation: slide 15s infinite;
 }
 
-@keyframes fadeInOut {
-    0% {
-        opacity: 1;
-    }
-    20% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 0;
-    }
-    70% {
-        opacity: 0;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-    }
+.hero-image {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-content {
+    position: absolute;
     text-align: center;
-    color: #fff;
     z-index: 1;
 }
 
 .hero-content h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.25rem;
+    margin: 10px 0;
 }
 
 .hero-button {
-    background-color: #4B5A20;
-    /* Secondary color */
-    color: #fff;
-    text-decoration: none;
+    background-color: #fff;
+    color: #DBA40E;
     padding: 10px 20px;
+    text-decoration: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 .hero-button:hover {
-    background-color: #787D12;
-    /* Tertiary color */
+    background-color: #DBA40E;
+    color: #fff;
 }
 
 
-/* Products Section */
+/* Product Section Styles */
 
 .products-section {
-    padding: 40px 20px;
-    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
 }
 
 .products-section h2 {
-    text-align: center;
-    margin-bottom: 40px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }
 
 .product-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center;
 }
 
 .product-item {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .product-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    max-width: 100%;
+    border-radius: 10px;
 }
 
 .product-item h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 10px 0;
 }
 
 .product-item p {
-    padding: 0 10px 15px;
+    color: #555;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
 }
 
 
-/* Services Section */
+/* Services Section Styles */
 
 .services-section {
-    padding: 40px 20px;
+    background-color: #f8f8f8;
+    padding: 50px 20px;
 }
 
 .services-section h2 {
     text-align: center;
-    margin-bottom: 40px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }
 
 .service-list {
@@ -225,95 +202,90 @@ body {
 }
 
 .service-item {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    max-width: 300px;
+    flex: 1 1 calc(25% - 40px);
+    max-width: calc(25% - 40px);
+    transition: transform 0.3s ease;
 }
 
-.service-item i {
-    font-size: 2rem;
-    color: #DBA40E;
-    /* Primary color */
-    margin-bottom: 10px;
+.service-item img {
+    max-width: 100%;
+    border-radius: 10px;
 }
 
 .service-item h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .service-item p {
-    font-size: 1rem;
+    color: #555;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
 }
 
 
-/* About Section */
+/* About Section Styles */
 
 .about-section {
-    padding: 40px 20px;
-    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
 }
 
 .about-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }
 
 .about-section p {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.about-section img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 
-/* Contact Section */
+/* Contact Section Styles */
 
 .contact-section {
-    padding: 40px 20px;
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
 }
 
 .contact-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contact-section p {
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }
 
 .contact-section ul {
     list-style: none;
     padding: 0;
-    text-align: center;
 }
 
 .contact-section li {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
 .contact-section a {
-    color: #040404;
-    /* Primary color */
+    color: #DBA40E;
     text-decoration: none;
-    transition: color 0.3s ease;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
 }
 
 
-/* Footer */
+/* Footer Styles */
 
 .footer {
-    background-color: #333;
+    background-color: #DBA40E;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -336,38 +308,47 @@ body {
 }
 
 .social-icon:hover {
-    color: #DBA40E;
-    /* Primary color */
+    color: #000;
 }
 
 
-/* Media Queries */
+/* Responsive Styles */
 
 @media (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
     .navbar-menu {
+        display: none;
         flex-direction: column;
         width: 100%;
-        display: none;
-        /* Hide menu by default on small screens */
+        background-color: #DBA40E;
     }
     .navbar-menu.active {
         display: flex;
-        /* Show menu when active */
-    }
-    .navbar-menu li {
-        margin: 10px 0;
     }
     .navbar-toggle {
         display: block;
     }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
 }
 
-@media (min-width: 769px) {
-    .navbar-toggle {
-        display: none;
+
+/* Animation Styles */
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
