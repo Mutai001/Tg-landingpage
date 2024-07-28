@@ -302,6 +302,13 @@ body {
     margin-bottom: 10px;
 }
 
+.contact-section a {
+    color: #040404;
+    /* Primary color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
 
 /* Footer */
 
