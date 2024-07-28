@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Giants</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">
+                <img src="assets/images/Tg-logo.jpeg" alt="Tech Giants Logo" class="logo">
+            </a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#products"><i class="fas fa-laptop"></i> Products</a></li>
+                <li><a href="#services"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-carousel">
+            <!-- Hero images from online sources -->
+            <img src="https://images.pexels.com/photos/700091/pexels-photo-700091.jpeg" alt="Hero Image 1" class="hero-image">
+            <img src="https://images.pexels.com/photos/1128065/pexels-photo-1128065.jpeg" alt="Hero Image 2" class="hero-image">
+            <img src="https://images.pexels.com/photos/1261722/pexels-photo-1261722.jpeg" alt="Hero Image 3" class="hero-image">
+        </div>
+        <div class="hero-content">
+            <h1>Welcome to Tech Giants</h1>
+            <p>Your one-stop shop for all electronics and computer needs. Discover the latest products and technologies!</p>
+            <a href="#products" class="hero-button">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Additional Content -->
+    <section id="products" class="products-section">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="https://images.pexels.com/photos/1335571/pexels-photo-1335571.jpeg" alt="Product 1">
+                <h3>Gaming Laptop</h3>
+                <p>High-performance gaming laptop with latest GPU and fast SSD.</p>
+            </div>
+            <div class="product-item">
+                <img src="https://images.pexels.com/photos/1920077/pexels-photo-1920077.jpeg" alt="Product 2">
+                <h3>Wireless Headphones</h3>
+                <p>Comfortable and high-quality wireless headphones with noise cancellation.</p>
+            </div>
+            <div class="product-item">
+                <img src="https://images.pexels.com/photos/592586/pexels-photo-592586.jpeg" alt="Product 3">
+                <h3>Smartphone</h3>
+                <p>Latest smartphone with a high-resolution display and powerful processor.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <i class="fas fa-repair"></i>
+                <h3>Technical Support</h3>
+                <p>24/7 technical support to help you with any issues.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-cogs"></i>
+                <h3>Custom PC Builds</h3>
+                <p>Build your custom PC with the latest components and technologies.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-truck"></i>
+                <h3>Fast Delivery</h3>
+                <p>Quick and reliable delivery for all your orders.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>Tech Giants is a leading e-commerce store specializing in the latest electronics and computer technologies. We offer a wide range of products, from laptops and desktops to accessories and gadgets. Our mission is to provide top-notch products and
+            exceptional customer service to tech enthusiasts and professionals alike.</p>
+        <!-- <img src="https://images.pexels.com/photos/3184345/pexels-photo-3184345.jpeg" alt="About Us" class="about-image"> -->
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Have any questions? Reach out to us through the following contact details:</p>
+        <ul>
+            <li><i class="fas fa-phone"></i> +254727498440</li>
+            <li><i class="fas fa-envelope"></i> techgiants001@gmail.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> P.O. Box 40-30100, Eldoret.</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Tech Giants. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://facebook.com/yourprofile" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/yourprofile" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/yourprofile" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/+254727498440" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Toggle navbar menu
+        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+            document.querySelector('.navbar-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
